@@ -1,11 +1,10 @@
-// 가장 단순한 전역 상태
 let todos = []; // { id:number, text:string, done:boolean }
 const $ = (s) => document.querySelector(s);
 const form = $("#form");
 const input = $("#input");
 const list = $("#list");
 
-// 렌더링: 현재 todos를 <li>로 그리기
+
 function render() {
   list.innerHTML = todos
     .map(t => `
@@ -18,12 +17,10 @@ function render() {
     .join("");
 }
 
-// 유틸: XSS 방지용 간단 이스케이프
 function escapeHTML(s) {
   return s.replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
 }
 
-// 이벤트: 추가
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const text = input.value.trim();
@@ -33,7 +30,6 @@ form.addEventListener("submit", (e) => {
   render();
 });
 
-// 이벤트 위임: 체크/삭제
 list.addEventListener("click", (e) => {
   const li = e.target.closest(".item");
   if (!li) return;
@@ -48,5 +44,4 @@ list.addEventListener("click", (e) => {
   }
 });
 
-// 초기 렌더
 render();
