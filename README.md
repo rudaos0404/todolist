@@ -1,6 +1,6 @@
 # TODOLIST ✅
 
-간단한 투두리스트 웹 애플리케이션입니다.  
+간단한 투두리스트 웹 입니다.  
 할 일을 추가하고, 완료 처리하거나 삭제할 수 있습니다.  
 
 👉 **페이지**: [https://rudaos0404.github.io/todolist/](https://rudaos0404.github.io/todolist/)
@@ -17,7 +17,7 @@
 ## 🛠 기술 스택
 - HTML
 - CSS
-- JavaScript (Vanilla JS)
+- JavaScript
 
 ---
 
