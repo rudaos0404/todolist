@@ -1,4 +1,4 @@
-let todos = []; // { id:number, text:string, done:boolean }
+let todos = [];
 const $ = (s) => document.querySelector(s);
 const form = $("#form");
 const input = $("#input");
